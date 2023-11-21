@@ -16,15 +16,15 @@ public class Esercizio18 {
 		Automobile[] elenco = new Automobile[x];
 		
 		for(int i=0; i<x; i++) {
+			elenco[i] = new Automobile();
 			System.out.println("inserisci marca");
-			String marca = interceptor.nextLine();
+			elenco[i].setMarca(interceptor.nextLine());
 			System.out.println("inserisci modello");
-			String modello = interceptor.nextLine();
+			elenco[i].setModello(interceptor.nextLine());
 			System.out.println("inserisci anno");
-			int anno = interceptor.nextInt();
+			elenco[i].setAnno(interceptor.nextInt());
 			interceptor.nextLine();
 			
-			elenco[i]=new Automobile(marca, modello, anno);
 			elenco[i].stampaDettaglio();
 		}
 		

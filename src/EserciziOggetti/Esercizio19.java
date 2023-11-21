@@ -16,19 +16,19 @@ public class Esercizio19 {
 		
 		int votomedio=0;
 		for(int i=0; i<x; i++) {
+			gruppo[i] = new Studenti();
 			System.out.println("inserisci nome dello studente");
-			String nome = interceptor.nextLine();
+			gruppo[i].setNome(interceptor.nextLine());
 			System.out.println("inserisci voto dello studente");
-			int voto = interceptor.nextInt();
+			gruppo[i].setVoto(interceptor.nextInt());
 			interceptor.nextLine();
-			gruppo[i] = new Studenti(nome, voto);
 			gruppo[i].stampaDati();
-			votomedio=votomedio+voto;
+			votomedio=votomedio+gruppo[i].getVoto();
 		}
 		
 		interceptor.close();
 		
-		int media = votomedio/x;
+		float media = votomedio/x;
 		
 		System.out.println("La media è: " + media);
 
