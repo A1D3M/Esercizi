@@ -49,7 +49,7 @@ public class Esercizio20 {
 				else {
 					System.out.println("La camera è occupata. Se desidera liberarla digiti Y");
 					String prenota=interceptor.nextLine();
-					if(prenota=="y" || prenota=="Y") {
+					if(prenota.equalsIgnoreCase("y")) {
 						elenco[i].setStato("libera");
 						System.out.println("Camera liberata");
 					}
