@@ -8,18 +8,28 @@ public class Esercizio18 {
 	public static void main(String[] args) {
 		
 		Scanner interceptor = new Scanner(System.in);
-		System.out.println("inserisci marca");
-		Automobile.marca = interceptor.nextLine();
-		System.out.println("inserisci modello");
-		Automobile.modello = interceptor.nextLine();
-		System.out.println("inserisci anno");
-		Automobile.anno = interceptor.nextInt();
-		interceptor.close();
 		
-		System.out.println("Marca: " + Automobile.marca);
-		System.out.println("Modello: " + Automobile.modello);
-		System.out.println("Anno: " + Automobile.anno);
+		System.out.println("inserisci numero di macchine");
+		int x= interceptor.nextInt();
+		interceptor.nextLine();
 		
+		Automobile[] elenco = new Automobile[x];
+		
+		for(int i=0; i<x; i++) {
+			System.out.println("inserisci marca");
+			String marca = interceptor.nextLine();
+			System.out.println("inserisci modello");
+			String modello = interceptor.nextLine();
+			System.out.println("inserisci anno");
+			int anno = interceptor.nextInt();
+			interceptor.nextLine();
+			
+			elenco[i]=new Automobile(marca, modello, anno);
+			elenco[i].stampaDettaglio();
+		}
+		
+		
+		interceptor.close();		
 	}
 
 }
