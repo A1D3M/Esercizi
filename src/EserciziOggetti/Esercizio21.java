@@ -9,30 +9,33 @@ public class Esercizio21 {
 
 		Scanner interceptor = new Scanner(System.in);	
 		
-		int x=3;
-		Prodotto[] elenco = new Prodotto[x];
+//		int x=3;
+//		Prodotto[] elenco = new Prodotto[x];
 		
-		elenco[0]= new Prodotto();
-		elenco[0].setNome("fsa");
-		elenco[0].setCodice("231b");
-		elenco[0].setPrezzo("55$");
-		elenco[0].stampaDati();
+//		elenco[0]= new Prodotto();
+//		elenco[0].setNome("fsa");
+//		elenco[0].setCodice("231b");
+//		elenco[0].setPrezzo("55$");
+//		elenco[0].stampaDati();
+//		
+//		elenco[1]= new Prodotto();
+//		elenco[1].setNome("adfa");
+//		elenco[1].setCodice("543d");
+//		elenco[1].setPrezzo("12$");
+//		elenco[1].stampaDati();
+//		
+//		elenco[2]= new Prodotto();
+//		elenco[2].setNome("gfdgfs");
+//		elenco[2].setCodice("644c");
+//		elenco[2].setPrezzo("103$");
+//		elenco[2].stampaDati();
 		
-		elenco[1]= new Prodotto();
-		elenco[1].setNome("adfa");
-		elenco[1].setCodice("543d");
-		elenco[1].setPrezzo("12$");
-		elenco[1].stampaDati();
-		
-		elenco[2]= new Prodotto();
-		elenco[2].setNome("gfdgfs");
-		elenco[2].setCodice("644c");
-		elenco[2].setPrezzo("103$");
-		elenco[2].stampaDati();
+		int x=0;
 		
 		Boolean continua=true;
 		while(continua) {
 			x++;
+			Prodotto[] elenco = new Prodotto[x];
 			elenco[x-1]=new Prodotto();
 			System.out.println("Inserisci nome del nuovo prodotto");
 			elenco[x-1].setNome(interceptor.nextLine());
