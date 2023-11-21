@@ -41,7 +41,7 @@ public class Esercizio20 {
 				if(stato=="libera") {
 					System.out.println("La camera è libera. Se desidera prenotarla digiti Y");
 					String prenota=interceptor.nextLine();
-					if(prenota=="y" || prenota=="Y") {
+					if(prenota.equalsIgnoreCase("y")) {
 						elenco[i].setStato("occupata");
 						System.out.println("Camera prenotata");
 					}
